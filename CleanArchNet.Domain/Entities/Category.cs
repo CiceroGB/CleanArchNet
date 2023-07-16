@@ -1,11 +1,9 @@
-namespace CleanArchNet.Domain.Entities;
-
 using CleanArchNet.Domain.Validation;
 
-public sealed class Category
-{
-    public int Id { get; private set; }
+namespace CleanArchNet.Domain.Entities;
 
+public sealed class Category : BaseEntity
+{
     public string Name { get; private set; }
 
     public Category(string name)
@@ -20,6 +18,11 @@ public sealed class Category
         Id = id;
         ValidateDomain(name);
 
+    }
+
+    public void Update(string name)
+    {
+        ValidateDomain(name);
     }
 
     public ICollection<Product> Products { get; set; }
