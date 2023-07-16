@@ -4,7 +4,7 @@ using FluentAssertions;
 
 namespace CleanArchNet.Domain.Test;
 
-public class CategoryUnitTest1
+public class CategoryUnitTest
 {
     [Fact(DisplayName = "Create Category With Valid State")]
     public void CreateCategory_WithValidParameters_ResultObjectValidState()
